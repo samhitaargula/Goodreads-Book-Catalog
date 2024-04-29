@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="439.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ClientController">
+   <children>
+      <AnchorPane fx:id="commonbg" prefHeight="439.0" prefWidth="839.0" stylesheets="@adminview.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <SplitPane dividerPositions="0.2666666666666667" layoutX="169.0" layoutY="48.0" orientation="VERTICAL" prefHeight="10.0" prefWidth="462.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+              </items>
+            </SplitPane>
+            <Label layoutX="280.0" layoutY="54.0" prefHeight="51.0" prefWidth="262.0" text="Add book to Catalog">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <SplitPane dividerPositions="0.2666666666666667" layoutX="169.0" layoutY="100.0" orientation="VERTICAL" prefHeight="2.0" prefWidth="462.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+               </items>
+            </SplitPane>
+            <Label layoutX="182.0" layoutY="132.0" text="Book">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="181.0" layoutY="171.0" text="Author">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="181.0" layoutY="210.0" text="Book Code">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="bookName" layoutX="388.0" layoutY="132.0" prefHeight="26.0" prefWidth="242.0" />
+            <TextField fx:id="author" layoutX="389.0" layoutY="172.0" prefHeight="26.0" prefWidth="242.0" />
+            <TextField fx:id="bookCode" layoutX="390.0" layoutY="212.0" prefHeight="26.0" prefWidth="242.0" />
+            <Button fx:id="logoutbtn" layoutX="676.0" layoutY="385.0" mnemonicParsing="false" onAction="#logout" prefHeight="17.0" prefWidth="139.0" stylesheets="@adminview.css" text="Log Out" />
+            <Button fx:id="addbookbtn" layoutX="211.0" layoutY="303.0" mnemonicParsing="false" onAction="#addBook" prefHeight="37.0" prefWidth="177.0" stylesheets="@adminview.css" text="Add Book" />
+            <DatePicker fx:id="datepick" layoutX="390.0" layoutY="251.0" prefHeight="26.0" prefWidth="242.0" />
+            <Label layoutX="181.0" layoutY="250.0" text="Publish Date">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Button fx:id="navigatebtn" layoutX="444.0" layoutY="303.0" mnemonicParsing="false" onAction="#navigateToTable" prefHeight="26.0" prefWidth="177.0" stylesheets="@adminview.css" text="View All Books" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

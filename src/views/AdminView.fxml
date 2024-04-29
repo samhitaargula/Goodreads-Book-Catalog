@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="603.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.AdminController">
+   <children>
+      <AnchorPane fx:id="commonbg" layoutY="-0.6666666666666666" prefHeight="610.0" prefWidth="790.0" stylesheets="@adminview.css" AnchorPane.bottomAnchor="-6.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+         <children>
+            <SplitPane dividerPositions="0.2666666666666667" layoutX="211.0" layoutY="50.0" orientation="VERTICAL" prefHeight="10.0" prefWidth="462.0">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+              </items>
+            </SplitPane>
+            <Label layoutX="336.0" layoutY="57.0" prefHeight="51.0" prefWidth="183.0" text="Add book to Catalog">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <SplitPane dividerPositions="0.2666666666666667" layoutX="211.0" layoutY="102.0" orientation="VERTICAL" prefHeight="2.0" prefWidth="462.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+               </items>
+            </SplitPane>
+            <Label layoutX="212.0" layoutY="119.0" text="Book">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="211.0" layoutY="158.0" text="Author">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="211.0" layoutY="197.0" text="Book Code">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="bookName" layoutX="431.0" layoutY="119.0" prefHeight="26.0" prefWidth="242.0" />
+            <TextField fx:id="author" layoutX="432.0" layoutY="159.0" prefHeight="26.0" prefWidth="242.0" />
+            <TextField fx:id="bookCode" layoutX="433.0" layoutY="199.0" prefHeight="26.0" prefWidth="242.0" />
+            <Button fx:id="logoutbtn" layoutX="662.0" layoutY="556.0" mnemonicParsing="false" onAction="#adminLogout" prefHeight="10.0" prefWidth="122.0" stylesheets="@adminview.css" text="Log Out" />
+            <Button fx:id="addbookbtn" layoutX="205.0" layoutY="271.0" mnemonicParsing="false" onAction="#addBook" prefHeight="37.0" prefWidth="213.0" stylesheets="@adminview.css" text="Add Book" />
+            <Button fx:id="navigatebtn" layoutX="444.0" layoutY="272.0" mnemonicParsing="false" onAction="#navigateToTable" prefHeight="37.0" prefWidth="223.0" stylesheets="@adminview.css" text="View All Books" />
+            <SplitPane dividerPositions="0.3636363636363637" layoutX="203.0" layoutY="328.0" orientation="VERTICAL" prefHeight="10.0" prefWidth="462.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+               </items>
+            </SplitPane>
+            <Label layoutX="315.0" layoutY="328.0" prefHeight="51.0" prefWidth="262.0" text="Remove book from Catalog">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <SplitPane dividerPositions="0.2666666666666667" layoutX="203.0" layoutY="369.0" orientation="VERTICAL" prefHeight="2.0" prefWidth="462.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+               </items>
+            </SplitPane>
+            <Label layoutX="200.0" layoutY="393.0" text="Book Code ">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="bookRemove" layoutX="313.0" layoutY="395.0" prefHeight="26.0" prefWidth="194.0" />
+            <Button fx:id="delbookbtn" layoutX="524.0" layoutY="388.0" mnemonicParsing="false" onAction="#removebook" prefHeight="26.0" prefWidth="142.0" stylesheets="@adminview.css" text="Delete Book" />
+            <SplitPane dividerPositions="0.2666666666666667" layoutX="205.0" layoutY="433.0" orientation="VERTICAL" prefHeight="2.0" prefWidth="462.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+               </items>
+            </SplitPane>
+            <DatePicker fx:id="publishDate" layoutX="433.0" layoutY="238.0" prefHeight="26.0" prefWidth="242.0" />
+            <Label layoutX="211.0" layoutY="237.0" text="Publish Date">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="202.0" layoutY="440.0" prefHeight="41.0" prefWidth="462.0" text="Update Book Availability">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="202.0" layoutY="482.0" text="Book Code ">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="bookUpdate" layoutX="302.0" layoutY="485.0" prefHeight="26.0" prefWidth="136.0" />
+            <Button fx:id="updatebook" layoutX="450.0" layoutY="478.0" mnemonicParsing="false" onAction="#updateBookUnavailable" prefHeight="38.0" prefWidth="107.0" stylesheets="@adminview.css" text="Unavailable" />
+            <SplitPane dividerPositions="0.2666666666666667" layoutX="205.0" layoutY="526.0" orientation="VERTICAL" prefHeight="2.0" prefWidth="462.0">
+               <items>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0" />
+               </items>
+            </SplitPane>
+            <Button fx:id="updatebook1" layoutX="562.0" layoutY="477.0" mnemonicParsing="false" onAction="#updateBookAvailable" prefHeight="38.0" prefWidth="100.0" stylesheets="@adminview.css" text="Available" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

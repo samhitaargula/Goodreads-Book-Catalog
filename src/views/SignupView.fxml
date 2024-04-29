@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="signupbg" prefHeight="515.0" prefWidth="815.0" stylesheets="@adminview.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SignUpController">
+   <children>
+      <Label alignment="TOP_LEFT" layoutX="95.0" layoutY="182.0" text="Username">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Label alignment="TOP_LEFT" layoutX="96.0" layoutY="227.0" text="Password">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <TextField fx:id="username" layoutX="240.0" layoutY="182.0" prefHeight="26.0" prefWidth="158.0" />
+      <Button fx:id="signUpBtn" layoutX="53.0" layoutY="398.0" mnemonicParsing="false" onAction="#checkSignUp" prefHeight="26.0" prefWidth="157.0" stylesheets="@application.css" text="Sign Up" />
+      <PasswordField fx:id="password" layoutX="240.0" layoutY="227.0" prefHeight="26.0" prefWidth="158.0" />
+      <Button fx:id="loginButton" layoutX="240.0" layoutY="399.0" mnemonicParsing="false" onAction="#loginback" prefHeight="26.0" prefWidth="158.0" stylesheets="@application.css" text="Login" />
+      <Label alignment="TOP_LEFT" layoutX="70.0" layoutY="274.0" text="Confirm Password">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <PasswordField fx:id="confirmPassword" layoutX="240.0" layoutY="274.0" prefHeight="26.0" prefWidth="158.0" />
+      <Label alignment="TOP_LEFT" layoutX="100.0" layoutY="326.0" text="Admin?">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font></Label>
+      <Label alignment="CENTER" layoutX="91.0" layoutY="114.0" prefHeight="31.0" prefWidth="233.0" text="Sign Up">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label fx:id="error" alignment="CENTER" layoutX="15.0" layoutY="464.0" prefHeight="46.0" prefWidth="398.0" textFill="#ffffff">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="14.0" layoutY="37.0" prefHeight="54.0" prefWidth="387.0" text="Goodreads Catalog">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="0.3292329013347626" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.1882352977991104" green="0.11372549086809158" blue="0.658823549747467" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <CheckBox fx:id="adminCheck" layoutX="240.0" layoutY="330.0" />
+   </children>
+</AnchorPane>
